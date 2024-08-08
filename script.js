@@ -75,3 +75,21 @@ document.getElementById("stop").addEventListener("click", function () {
         clearInterval(myInterval); 
     }
 });
+
+document.getElementById("reset").addEventListener("click", function () {
+    if (currentTimer) {
+        clearInterval(myInterval); 
+        let defaultTime = currentTimer.getAttribute("data-duration");
+        if (defaultTime) {
+            let [minutes, seconds] = defaultTime.split(":");
+            if (seconds === undefined) {
+                seconds = "00"; 
+            }
+            minutes = minutes.padStart(2, '0'); 
+            seconds = seconds.padStart(2, '0'); 
+            currentTimer.textContent = `${parseInt(minutes)}:${seconds}`; // Reset the timer display to its default value
+        } else {
+            console.error("data-duration attribute is not set correctly.");
+        }
+    }
+});
