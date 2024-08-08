@@ -49,6 +49,7 @@ function startTimer(timerdisplay) {
             clearInterval(myInterval);
             timerdisplay.textContent = "00:00";
             const alarm = new Audio("https://www.freespecialeffects.co.uk/soundfx/clocks/clock_chime.wav");
+            alarm.volume = 0.05;
             alarm.play();
         } else {
             const minutes = Math.floor(timeRemaining / 60000);
