@@ -13,7 +13,7 @@
 
     <div class="container">
         <div class="timer">
-            <h1>🍅 Pomodoro Timer</h1>
+            <h1><b>🍅 Pomodoro Timer</b></h1>
             <div class="button-container">
                 <button class="button" id="pomodoro-session">Pomodoro</button>
                 <button class="button" id="short-break">Short Break</button>
@@ -38,11 +38,15 @@
                 <button id="reset">RESET</button>
             </div>
         </div>
-
-        <div id="myDIV" class="todoList">
-            <h2 style="padding-bottom: 15px">To Do List</h2>
-            <input type="text" data-bs-theme="dark" id="myInput" placeholder="Add a task...">
-            <span onclick="newElement()" data-bs-theme="dark" class="addBtn text-white">+ New Task</span>
+        
+        <div id="myDIV" class="todoList row justify-content-center mt-5">
+            <div class="col-12 col-md-8 col-lg-6">
+                <h2 class="text-center" style="padding-bottom: 15px"><b>To Do List</b></h2>
+                <div class="input-group mb-3">
+                    <input class="form-control border" type="text" data-bs-theme="dark" id="myInput" placeholder="Add a task...">
+                    <button onclick="newElement()" data-bs-theme="dark" class="btn btn-outline-light border">+ New Task</button>
+                </div>
+            </div>
         </div>
     </div>
     <ul id="myUL"></ul>
